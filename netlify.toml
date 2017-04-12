@@ -3,8 +3,8 @@
   publish = "dist"
   command = "npm run build"
 
-[context.production]
-  command = "hugo_0.18 server --theme=dimension --buildDrafts"
+[context.production.environment]
+  HUGO_VERSION = "0.20"
 
 [context.deploy-preview]
   command = "npm run build-preview"
